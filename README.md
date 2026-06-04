@@ -1,68 +1,54 @@
-# CodeIgniter 4 Application Starter
+# MenuScanOrder
 
-## What is CodeIgniter?
+A SaaS platform that allows restaurant and cafe owners to digitize their menu and manage orders through QR codes. Customers can scan a QR code to browse the menu and place orders directly from their phone, while staff can manage and track all incoming orders in real time through a management console.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+## Features
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+- QR code generation for menu items and tables
+- Customer-facing menu browsing and order placement
+- Staff order management and tracking dashboard
+- Real-time order status updates
+- Menu and item management for business owners
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+## Tech Stack
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+- **Backend:** PHP, CodeIgniter 4
+- **Database:** PostgreSQL
+- **Frontend:** HTML, CSS, JavaScript
 
-## Installation & updates
+## Getting Started
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+### Requirements
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+- PHP 8.1 or higher
+- Composer
+- PostgreSQL
 
-## Setup
+### Installation
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+1. Clone the repository
+   git clone https://github.com/athaqilmakarim/MenuScanOrder.git
 
-## Important Change with index.php
+2. Install dependencies
+   composer install
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+3. Set up environment
+   cp env .env
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+4. Update .env with your database credentials and base URL
 
-**Please** read the user guide for a better explanation of how CI4 works!
+5. Run the development server
+   php spark serve
 
-## Repository Management
+The app will be available at http://localhost:8080
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+## Project Structure
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+- app/ — Controllers, models, views, and config
+- public/ — Publicly accessible assets and entry point
+- tests/ — Test files
+- writable/ — Cache, logs, and uploads
 
-## Server Requirements
+## License
 
-PHP version 8.1 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> The end of life date for PHP 7.4 was November 28, 2022.
-> The end of life date for PHP 8.0 was November 26, 2023.
-> If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> The end of life date for PHP 8.1 will be November 25, 2024.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+MIT
